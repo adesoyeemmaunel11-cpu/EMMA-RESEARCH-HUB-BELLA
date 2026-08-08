@@ -691,6 +691,7 @@ if (registerForm) {
     event.preventDefault();
 
     const email = document.getElementById("register-email").value.trim();
+    console.log("REGISTER EMAIL:", email);
     const password = document.getElementById("register-password").value;
 
     try {

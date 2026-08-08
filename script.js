@@ -1,3 +1,28 @@
+// ==========================================
+// EMMA RESEARCH HUB BELLA
+// Firebase Authentication
+// ==========================================
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged
+} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAQs___j0SN1pqUGpbyTLVRRJGQv7tBC2k",
+  authDomain: "emma-research-hub-bella.firebaseapp.com",
+  projectId: "emma-research-hub-bella",
+  storageBucket: "emma-research-hub-bella.firebasestorage.app",
+  messagingSenderId: "994971750123",
+  appId: "1:994971750123:web:cf7000237121c574a438ae"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
 /*==================================================
         EMMA RESEARCH HUB BELLA v2.0
                 PART 3A

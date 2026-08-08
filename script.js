@@ -680,3 +680,28 @@ circle.remove();
 =========================*/
 
 console.log("🚀 EMMA RESEARCH HUB BELLA v2.0 Fully Loaded");
+// ==========================================
+// FIREBASE - CREATE ACCOUNT
+// ==========================================
+
+const registerForm = document.getElementById("register-form");
+
+if (registerForm) {
+  registerForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const email = document.getElementById("register-email").value.trim();
+    const password = document.getElementById("register-password").value;
+
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+
+      alert("✅ Account created successfully!");
+
+      registerForm.reset();
+
+    } catch (error) {
+      alert("❌ " + error.message);
+    }
+  });
+}

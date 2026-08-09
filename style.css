@@ -1797,5 +1797,58 @@ console.log("Website Ready!");
     .journey-card {
         padding: 23px;
     }
+/*==================================================
+  LEARNING JOURNEY BUTTONS
+==================================================*/
 
+.journey-button {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 16px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.journey-button:hover {
+    opacity: 0.85;
+}
+
+.learning-start {
+    max-width: 850px;
+    margin: 35px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.learning-start h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.learning-start p {
+    color: #666;
+    line-height: 1.7;
+}
+
+.learning-actions {
+    margin-top: 20px;
+}
+
+.learning-actions a {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #b8860b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
 }

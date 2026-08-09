@@ -471,7 +471,13 @@
         >
 
         </div>
-
+<button
+    class="back-home"
+    onclick="backToSubjects()"
+    style="margin-top:20px; cursor:pointer;"
+>
+    ← Back to Subjects
+</button>
 
         <div class="controls">
 
@@ -563,12 +569,39 @@
         href="index.html"
         class="back-home"
     >
-
+        
         Back to EMMA Research Hub
-
+        
     </a>
+    
+<button
+    class="start-button"
+    onclick="location.reload()"
+>
+    Take Another CBT
+<button
+    class="next"
+    onclick="reviewAnswers()"
+    style="margin-top:10px;"
+>
+    📋 Review Answers
+</button>
 
-
+<div
+    id="review-area"
+    style="
+        margin-top:25px;
+        text-align:left;
+    "
+></div>
+    
+<a
+    href="month1.html#lesson6"
+    class="back-home"
+    style="margin-left:10px;"
+>
+    📘 Study Lesson
+</a>
 </div>
 
 
@@ -1238,7 +1271,10 @@ function startSelectedSubject() {
         document.querySelector(
             'input[name="subject"]:checked'
         );
-
+document.getElementById(
+    "exam-subject-title"
+).textContent =
+    selectedSubject + " CBT";
 
     if (!selected) {
 
@@ -1266,10 +1302,11 @@ function startSelectedSubject() {
 
 
     currentQuestion = 0;
-
-
+    
+document.getElementById(
+    "review-area"
+).innerHTML = "";
     timeLeft = 600;
-
 
     document.getElementById(
         "subject-area"
@@ -1325,7 +1362,7 @@ function loadQuestion() {
 
 
     const optionsContainer =
-        document.getElementById(
+        
             "options"
         );
 
@@ -1486,9 +1523,98 @@ function previousQuestion() {
         loadQuestion();
 
     }
+function backToSubjects() {
 
+    clearInterval(
+        timerInterval
+    );
+
+    document.getElementById(
+        "exam-area"
+    ).style.display = "none";
+
+    document.getElementById(
+        "result"
+    ).style.display = "none";
+
+    document.getElementById(
+        "subject-area"
+    ).style.display = "block";
 }
+function reviewAnswers() {
 
+    const reviewArea =
+        document.getElementById(
+            "review-area"
+        );
+
+    reviewArea.innerHTML = "";
+
+    questions.forEach(
+        function(question, index) {
+
+            const userAnswer =
+                userAnswers[index];
+
+            const correctAnswer =
+                question.answer;
+
+            const reviewItem =
+                document.createElement(
+                    "div"
+                );
+
+            reviewItem.style.marginBottom =
+                "20px";
+
+            reviewItem.style.padding =
+                "15px";
+
+            reviewItem.style.border =
+                "1px solid #ddd";
+
+            reviewItem.style.borderRadius =
+                "8px";
+
+            const resultText =
+                userAnswer === correctAnswer
+                    ? "✅ Correct"
+                    : "❌ Incorrect";
+
+            reviewItem.innerHTML = `
+                <strong>
+                    Question ${index + 1}
+                </strong>
+
+                <p style="margin-top:8px;">
+                    ${question.question}
+                </p>
+
+                <p>
+                    <strong>Your answer:</strong>
+                    ${
+                        userAnswer !== null
+                            ? question.options[userAnswer]
+                            : "Not answered"
+                    }
+                </p>
+
+                <p>
+                    <strong>Correct answer:</strong>
+                    ${question.options[correctAnswer]}
+                </p>
+
+                <p>
+                    ${resultText}
+                </p>
+            `;
+
+            reviewArea.appendChild(
+                reviewItem
+            );
+        }
+    );
+}
 
 
 /*==================================================
@@ -1616,7 +1742,19 @@ function submitExam() {
         score +
         " / " +
         questions.length;
-
+    
+document.getElementById(
+    "result-message"
+).textContent =
+    "You scored " +
+    score +
+    " out of " +
+    questions.length +
+    " (" +
+    Math.round(
+        (score / questions.length) * 100
+    ) +
+    "%).";
 
     const percentage =
 
@@ -1626,43 +1764,34 @@ function submitExam() {
         ) * 100;
 
 
-    if (
-        percentage >= 80
-    ) {
+if (percentage >= 80) {
 
+    document.getElementById(
+        "result-message"
+    ).textContent =
+        "Excellent! You have a strong understanding of " +
+        selectedSubject +
+        ". Keep learning and continue improving.";
 
-        document.getElementById(
-            "result-message"
-        ).textContent =
+} else if (percentage >= 50) {
 
-            "Excellent work! Keep learning and continue your journey.";
+    document.getElementById(
+        "result-message"
+    ).textContent =
+        "Good effort! You understand some of " +
+        selectedSubject +
+        ", but more practice will help you improve.";
 
+} else {
 
-    } else if (
-        percentage >= 50
-    ) {
-
-
-        document.getElementById(
-            "result-message"
-        ).textContent =
-
-            "Good effort! Keep practicing and you will improve.";
-
-
-    } else {
-
-
-        document.getElementById(
-            "result-message"
-        ).textContent =
-
-            "Keep practicing. Every attempt is a step toward improvement.";
-
-    }
+    document.getElementById(
+        "result-message"
+    ).textContent =
+        "Keep practicing " +
+        selectedSubject +
+        ". Review the lessons and try the CBT again.";
 
 }
-
 
 </script>
 

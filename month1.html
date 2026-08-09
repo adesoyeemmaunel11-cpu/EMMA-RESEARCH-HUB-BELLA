@@ -9,7 +9,7 @@
           content="width=device-width, initial-scale=1.0">
 
     <title>
-        Month 1 Learning | EMMA RESEARCH HUB BELLA
+        Month 1 Technology | EMMA RESEARCH HUB BELLA
     </title>
 
     <style>
@@ -30,7 +30,7 @@
             background: #111827;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 30px 15px;
         }
 
         .header h1 {
@@ -38,40 +38,58 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 35px auto;
             padding: 20px;
         }
 
-        .welcome {
+        .intro {
             background: white;
             padding: 30px;
             border-radius: 15px;
             text-align: center;
+            margin-bottom: 30px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.07);
-            margin-bottom: 25px;
         }
 
-        .welcome h2 {
+        .intro h2 {
             margin-bottom: 15px;
         }
 
-        .welcome p {
+        .intro p {
             color: #666;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .lesson-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+            gap: 22px;
         }
 
         .lesson-card {
             background: white;
-            padding: 25px;
-            border-radius: 14px;
+            padding: 28px;
+            border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+            transition: 0.2s;
+        }
+
+        .lesson-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .lesson-number {
+            display: inline-flex;
+            width: 42px;
+            height: 42px;
+            align-items: center;
+            justify-content: center;
+            background: #111827;
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 15px;
         }
 
         .lesson-card h3 {
@@ -94,6 +112,31 @@
             font-weight: bold;
         }
 
+        .practice {
+            margin-top: 30px;
+            background: #111827;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .practice p {
+            margin: 12px 0 20px;
+            color: #d1d5db;
+            line-height: 1.7;
+        }
+
+        .practice-button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #b8860b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
         .back-button {
             display: inline-block;
             margin-top: 30px;
@@ -104,7 +147,7 @@
             border-radius: 7px;
         }
 
-        @media (max-width: 650px) {
+        @media (max-width: 700px) {
 
             .lesson-grid {
                 grid-template-columns: 1fr;
@@ -131,7 +174,7 @@
     </h1>
 
     <p>
-        Month 1 — Start Your Learning Journey
+        Month 1 • Technology
     </p>
 
 </header>
@@ -140,33 +183,45 @@
 <main class="container">
 
 
-    <section class="welcome">
+    <!-- INTRO -->
+
+    <section class="intro">
 
         <h2>
-            🌟 Welcome to Month 1
+            💻 Technology Learning Journey
         </h2>
 
         <p>
-            This is the beginning of your learning journey.
-            Start with the fundamentals, study consistently,
-            and test your knowledge as you progress.
+            Welcome to your first month of Technology learning.
+            Start with the fundamentals, understand how technology
+            works, and gradually build the knowledge you need for
+            the next stage of your journey.
         </p>
 
     </section>
 
 
+    <!-- LESSONS -->
+
     <section class="lesson-grid">
 
 
-        <div class="lesson-card">
+        <!-- LESSON 1 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                1
+            </span>
 
             <h3>
-                📚 Lesson 1 — Introduction
+                What Is Technology?
             </h3>
 
             <p>
-                Learn the basic ideas and important concepts
-                related to your chosen field.
+                Learn what technology means, how people use it,
+                and how technology can help solve problems and
+                improve everyday life.
             </p>
 
             <a href="#lesson1"
@@ -176,18 +231,25 @@
 
             </a>
 
-        </div>
+        </article>
 
 
-        <div class="lesson-card">
+        <!-- LESSON 2 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                2
+            </span>
 
             <h3>
-                📖 Lesson 2 — Fundamentals
+                Computer Fundamentals
             </h3>
 
             <p>
-                Build your foundation by understanding
-                the essential concepts you will need later.
+                Learn about computers, their major components,
+                input and output devices, storage, and basic
+                computer operations.
             </p>
 
             <a href="#lesson2"
@@ -197,50 +259,139 @@
 
             </a>
 
-        </div>
+        </article>
 
 
-        <div class="lesson-card">
+        <!-- LESSON 3 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                3
+            </span>
 
             <h3>
-                🧠 Practice
+                Internet & Websites
             </h3>
 
             <p>
-                Review what you have learned and practice
-                applying your knowledge.
+                Discover what the internet is, how websites work,
+                and how people access information online.
             </p>
 
-            <a href="cbt.html"
+            <a href="#lesson3"
                class="lesson-button">
 
-                Practice CBT
+                Start Lesson
 
             </a>
 
-        </div>
+        </article>
 
 
-        <div class="lesson-card">
+        <!-- LESSON 4 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                4
+            </span>
 
             <h3>
-                🎯 Month 1 Goal
+                Introduction to HTML
             </h3>
 
             <p>
-                Complete your lessons, practice regularly,
-                and prepare yourself for the next stage.
+                Learn how HTML provides the structure of a webpage
+                and understand basic HTML elements.
             </p>
 
-            <a href="#goal"
+            <a href="#lesson4"
                class="lesson-button">
 
-                View Goal
+                Start Lesson
 
             </a>
 
-        </div>
+        </article>
 
+
+        <!-- LESSON 5 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                5
+            </span>
+
+            <h3>
+                Introduction to CSS
+            </h3>
+
+            <p>
+                Learn how CSS is used to control the appearance,
+                layout, spacing, and presentation of webpages.
+            </p>
+
+            <a href="#lesson5"
+               class="lesson-button">
+
+                Start Lesson
+
+            </a>
+
+        </article>
+
+
+        <!-- LESSON 6 -->
+
+        <article class="lesson-card">
+
+            <span class="lesson-number">
+                6
+            </span>
+
+            <h3>
+                Introduction to JavaScript
+            </h3>
+
+            <p>
+                Learn how JavaScript can make webpages interactive
+                and respond to actions from users.
+            </p>
+
+            <a href="#lesson6"
+               class="lesson-button">
+
+                Start Lesson
+
+            </a>
+
+        </article>
+
+
+    </section>
+
+
+    <!-- CBT -->
+
+    <section class="practice">
+
+        <h2>
+            🧠 Test Your Knowledge
+        </h2>
+
+        <p>
+            After studying, use our free CBT system to practice
+            what you have learned.
+        </p>
+
+        <a href="cbt.html"
+           class="practice-button">
+
+            Start Free CBT
+
+        </a>
 
     </section>
 

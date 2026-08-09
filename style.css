@@ -1624,3 +1624,178 @@ console.log("Website Ready!");
         padding: 60px 5%;
     }
 }
+/*==================================================
+  6-MONTH LEARNING JOURNEY
+==================================================*/
+
+.learning-journey {
+    padding: 80px 20px;
+    background: #f7f8fa;
+}
+
+.learning-journey .section-title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 45px;
+}
+
+.learning-journey .section-title h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.learning-journey .section-title p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* INTRO */
+
+.journey-intro {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.journey-intro h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.journey-intro p {
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* MONTH GRID */
+
+.journey-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+
+/* MONTH CARD */
+
+.journey-card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.journey-card:hover {
+    transform: translateY(-5px);
+}
+
+.month-number {
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #111827;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.journey-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.journey-card h4 {
+    color: #b8860b;
+    margin-bottom: 14px;
+    font-size: 17px;
+}
+
+.journey-card p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.journey-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 20px;
+    background: #f1f1f1;
+    color: #777;
+    font-size: 13px;
+}
+
+
+/* CERTIFICATE MESSAGE */
+
+.certificate-message {
+    max-width: 850px;
+    margin: 50px auto 0;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+}
+
+.certificate-message h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.certificate-message p {
+    color: #666;
+    line-height: 1.8;
+}
+
+.certificate-message .free-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #111827;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+
+    .journey-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .learning-journey {
+        padding: 55px 15px;
+    }
+
+    .learning-journey .section-title h2 {
+        font-size: 28px;
+    }
+
+    .journey-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-card {
+        padding: 23px;
+    }
+
+}

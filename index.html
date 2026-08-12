@@ -20,7 +20,40 @@
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 </head>
+<style>
+/* EMMA RESEARCH HUB — Liquid Glass Foundation */
 
+:root {
+  --bg: #02040b;
+  --glass: rgba(10, 18, 35, 0.62);
+  --border: rgba(255,255,255,0.12);
+  --text: #ffffff;
+  --muted: rgba(255,255,255,0.65);
+  --cyan: #00f3ff;
+  --purple: #9b5cff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow:
+    0 20px 60px rgba(0,0,0,.25),
+    inset 0 1px rgba(255,255,255,.05);
+}
+
+.glass:hover {
+  border-color: rgba(0,243,255,.25);
+  transform: translateY(-2px);
+  transition: .25s ease;
+}
+</style>
 <body>
 
 <!--================ NAVIGATION ================-->
